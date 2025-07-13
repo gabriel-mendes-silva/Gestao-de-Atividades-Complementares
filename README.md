@@ -46,7 +46,7 @@ Para fazer o menu de interação com o usuário, se fez necessário a utilizaç�
 
 ---
 
-## ▶️ Instruções de Uso
+## 📖 Instruções de Uso
 
 O algoritmo é utilizado por meio de um menu console com opções.
 
