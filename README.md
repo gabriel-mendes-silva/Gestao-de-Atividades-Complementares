@@ -7,6 +7,11 @@
 Este repositório tem como objetivo desenvolver um projeto para suprir as necessidades do câmpus com relação aos requerimentos de atividades complementares, que atualmente são feitos de modo manual individualmente devido à falta de um sistema que automatize os processos.
 
 ---
+## 🗒️​ Diagramas UML
+
+
+
+---
 
 ## 📦 Estrutura do Projeto
 
