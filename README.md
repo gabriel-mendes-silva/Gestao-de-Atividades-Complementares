@@ -9,7 +9,7 @@ Este repositório tem como objetivo desenvolver um projeto para suprir as necess
 ---
 ## 🗒️​ Diagramas UML
 
-Diagrama contendo o Menu que possui a Padrão de Projeto Composite
+Diagrama contendo o Menu que possui a Padrão de Projeto Composite que está no pacote View
 
 ![Image Alt](https://github.com/gabriel-mendes-silva/Gestao-de-Atividades-Complementares/blob/a099fd4545506a23ecca177483e7a3f7198db1ed/Menu..PNG)
 
