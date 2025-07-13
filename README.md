@@ -32,7 +32,7 @@ Para utilizar filtros dentro do projeto, como por exemplo, filtrar as horas de u
 
 Utilizado conjuntamente com o Design Pattern Specification, retornando um objeto nulo.
 
----
+
 
 ### 🔁 Strategy
 
