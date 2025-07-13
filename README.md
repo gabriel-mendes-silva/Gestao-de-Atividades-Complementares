@@ -14,7 +14,7 @@ O projeto está organizado por classes que utilizam alguns padrões de projetos 
 
 Diante deste contexto foram utilizados os padrões a seguir:
 
----
+
 
 ### 🧱 Builder
 
