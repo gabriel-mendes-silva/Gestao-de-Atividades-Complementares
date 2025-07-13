@@ -33,5 +33,16 @@ public class MenuRequerimento implements ItemMenu{
             );
         }
         System.out.println("Escolha a opção (0 - Sair):");
+        this.buscarItemMenuPorNumero();
+    }
+
+    public void adicionarItemMenu(ItemMenu itemMenu, String numero){
+        this.idItensMenu.put(numero,itemMenu);
+    }
+
+    public ItemMenu buscarItemMenuPorNumero(){
+        Scanner scanner = new Scanner(System.in);
+        String numero = scanner.nextLine().trim();
+        return this.idItensMenu.get(numero);
     }
 }

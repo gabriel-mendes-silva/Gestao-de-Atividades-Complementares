@@ -4,6 +4,7 @@ import Model.*;
 import Sessao.SessaoAtual;
 import View.MenuPrincipal;
 import View.MenuNovoRequerimento;
+import View.MenuRequerimento;
 
 import java.text.ParseException;
 
@@ -62,13 +63,18 @@ public class Main {
 
         System.out.println(validacaoPorModalidade.violations());
 
-        SessaoAtual sessaoAtual = new SessaoAtual();
 
+        System.out.println("\nComo a aplicação deve aperecer, quando operada desde o início");
+        SessaoAtual sessaoAtual = new SessaoAtual();
+        MenuRequerimento menuRequerimento = new MenuRequerimento("Iniciar Requerimento",sessaoAtual);
         MenuNovoRequerimento menuNovoRequerimento = new MenuNovoRequerimento("Novo requerimento",sessaoAtual);
+        menuNovoRequerimento.adicionarItemMenu(menuRequerimento,"1");
 
         MenuPrincipal menuPrincipal = new MenuPrincipal("Página Inicial",sessaoAtual);
         menuPrincipal.adicionarItemMenu(menuNovoRequerimento,"1");
         menuPrincipal.exibir();
+
+
 
 
 
