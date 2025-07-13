@@ -50,4 +50,3 @@ Para fazer o menu de interação com o usuário, se fez necessário a utilizaç�
 
 O algoritmo é utilizado por meio de um menu console com opções.
 
----
