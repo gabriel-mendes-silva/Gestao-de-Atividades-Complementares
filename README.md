@@ -14,6 +14,13 @@ Diagrama contendo o Menu que possui a Padrão de Projeto Composite que está no 
 ![Image Alt](https://github.com/gabriel-mendes-silva/Gestao-de-Atividades-Complementares/blob/a099fd4545506a23ecca177483e7a3f7198db1ed/Menu..PNG)
 
 ![Image Alt](https://github.com/gabriel-mendes-silva/Gestao-de-Atividades-Complementares/blob/a75ff40c24360b416cad3a6cd63218b9617004fc/Builder.PNG)
+
+![Image Alt](https://github.com/gabriel-mendes-silva/Gestao-de-Atividades-Complementares/blob/f1dddf9b9594a8bd6811877bebb1cc9339873008/Nulo%20e%20Composite.PNG)
+
+![Image Alt](https://github.com/gabriel-mendes-silva/Gestao-de-Atividades-Complementares/blob/f1dddf9b9594a8bd6811877bebb1cc9339873008/Strategy.PNG)
+
+![Image Alt](https://github.com/gabriel-mendes-silva/Gestao-de-Atividades-Complementares/blob/450e0f9a02cdc4b2a0f1caa49a6d629b68f17835/Geralzao.PNG)
+
 ---
 
 ## 📦 Estrutura do Projeto
