@@ -20,13 +20,13 @@ Diante deste contexto foram utilizados os padrões a seguir:
 
 Para diminuir o número de informações no construtor e deixar o algoritmo visualmente menos poluído optamos por utilizar o padrão builder para fazer apenas a chamada das etapas necessárias.
 
----
+
 
 ### 🧮 Specification
 
 Para utilizar filtros dentro do projeto, como por exemplo, filtrar as horas de uma modalidade específica, optamos pela escolha do padrão specification de modo que se verifique quais objetos satisfazem o filtro.
 
----
+
 
 ### 🚫 Null Object
 
@@ -38,7 +38,7 @@ Utilizado conjuntamente com o Design Pattern Specification, retornando um objeto
 
 Para tornar as classes do projeto intercambiáveis, optamos pelo Design Pattern Strategy, por meio da utilização de interfaces e classes que as implementam.
 
----
+
 
 ### 🧩 Composite
 
