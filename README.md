@@ -20,6 +20,8 @@ Diante deste contexto foram utilizados os padrões a seguir:
 
 Para diminuir o número de informações no construtor e deixar o algoritmo visualmente menos poluído optamos por utilizar o padrão builder para fazer apenas a chamada das etapas necessárias.
 
+ ![Image Alt](https://github.com/gabriel-mendes-silva/Gestao-de-Atividades-Complementares/blob/bd9876c26efb77bdaea0dcc6c4b8fcadf0aeb3dc/Builder.png).
+
 
 
 ### 🧮 Specification
