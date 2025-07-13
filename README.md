@@ -28,12 +28,14 @@ Para diminuir o número de informações no construtor e deixar o algoritmo visu
 
 Para utilizar filtros dentro do projeto, como por exemplo, filtrar as horas de uma modalidade específica, optamos pela escolha do padrão specification de modo que se verifique quais objetos satisfazem o filtro.
 
+![Image Alt](https://github.com/gabriel-mendes-silva/Gestao-de-Atividades-Complementares/blob/231b52e9eb2afce1d3645d21a6a7d8dda47661f2/Specification.png).
 
 
 ### 🚫 Null Object
 
 Utilizado conjuntamente com o Design Pattern Specification, retornando um objeto nulo.
 
+![Image Alt](https://github.com/gabriel-mendes-silva/Gestao-de-Atividades-Complementares/blob/231b52e9eb2afce1d3645d21a6a7d8dda47661f2/Null%20Object.png).
 
 
 ### 🔁 Strategy
@@ -41,10 +43,17 @@ Utilizado conjuntamente com o Design Pattern Specification, retornando um objeto
 Para tornar as classes do projeto intercambiáveis, optamos pelo Design Pattern Strategy, por meio da utilização de interfaces e classes que as implementam.
 
 
+![Image Alt](https://github.com/gabriel-mendes-silva/Gestao-de-Atividades-Complementares/blob/231b52e9eb2afce1d3645d21a6a7d8dda47661f2/Strategy1.png).
+
+![Image Alt](https://github.com/gabriel-mendes-silva/Gestao-de-Atividades-Complementares/blob/231b52e9eb2afce1d3645d21a6a7d8dda47661f2/Strategy2.png).
 
 ### 🧩 Composite
 
 Para fazer o menu de interação com o usuário, se fez necessário a utilização do padrão Composite, onde um menu possui submenus, que vão compondo outros menus.
+
+![Image Alt](https://github.com/gabriel-mendes-silva/Gestao-de-Atividades-Complementares/blob/231b52e9eb2afce1d3645d21a6a7d8dda47661f2/Composite.png).
+
+![Image Alt](https://github.com/gabriel-mendes-silva/Gestao-de-Atividades-Complementares/blob/231b52e9eb2afce1d3645d21a6a7d8dda47661f2/Composite2.png).
 
 ---
 
