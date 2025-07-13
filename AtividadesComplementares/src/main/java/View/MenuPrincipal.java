@@ -1,43 +1,39 @@
 package View;
 
-import Model.Aluno;
-import Model.RepositorioDeAlunos;
+import Sessao.SessaoAtual;
 
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
-public class MenuLogin implements ItemMenu{
-    private RepositorioDeAlunos repositorioDeAlunos;
-
+public class MenuPrincipal implements ItemMenu{
     private String titulo;
     private Map<String,ItemMenu> idItensMenu;
+    private SessaoAtual sessaoAtual;
 
-    public MenuLogin(String titulo, RepositorioDeAlunos repositorioDeAlunos) {
+    public MenuPrincipal(String titulo, SessaoAtual sessaoAtual) {
         this.titulo = titulo;
         this.idItensMenu = new HashMap<>();
-        this.repositorioDeAlunos = repositorioDeAlunos;
+        this.sessaoAtual = sessaoAtual;
     }
-
     @Override
     public String titulo() {
-        return "======== Menu de Login ========";
+        return this.titulo;
     }
 
     @Override
     public void exibir() {
+        System.out.println("======== Gestão de Atividades Complementares ========");
+        for (String idItem : this.idItensMenu.keySet()) {
+            System.out.println(
+                    idItem + ") " +
+                    this.idItensMenu.get(idItem).titulo()
+            );
+        }
+        System.out.println("Escolha a opção (0 - Sair):");
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Insira nome completo: ");
-        String nome = scanner.nextLine();
-        System.out.println("Insira matrícula: ");
-        String matricula = scanner.nextLine();
-        this.autenticar(new Aluno(nome,matricula));
+        this.buscarItemMenuPorNumero().exibir();
     }
-
-    public Aluno autenticar(Aluno aluno){
-        return null;
-    }
-
     public void adicionarItemMenu(ItemMenu itemMenu, String numero){
         this.idItensMenu.put(numero,itemMenu);
     }
@@ -48,3 +44,4 @@ public class MenuLogin implements ItemMenu{
         return this.idItensMenu.get(numero);
     }
 }
+

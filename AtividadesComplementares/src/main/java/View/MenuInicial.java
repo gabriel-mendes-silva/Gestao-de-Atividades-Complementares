@@ -7,7 +7,7 @@ import java.util.Map;
 
 public class MenuInicial implements ItemMenu {
     private String titulo;
-    private Map<ItemMenu,String> idItensMenu;
+    private Map<String,ItemMenu> idItensMenu;
 
     public MenuInicial(String titulo) {
         this.titulo = titulo;
@@ -15,7 +15,7 @@ public class MenuInicial implements ItemMenu {
     }
 
     public void adicionarMenu(ItemMenu itemMenu, String numero){
-        this.idItensMenu.put(itemMenu, numero);
+        this.idItensMenu.put(numero, itemMenu);
     }
 
     @Override

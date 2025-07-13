@@ -41,4 +41,7 @@ public class Requerimento {
         return this.data;
     }
 
+    public String numero() {
+        return numero;
+    }
 }

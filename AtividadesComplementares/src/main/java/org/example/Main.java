@@ -1,29 +1,16 @@
 package org.example;
 
 import Model.*;
+import Sessao.SessaoAtual;
+import View.MenuPrincipal;
+import View.MenuNovoRequerimento;
 
-import javax.annotation.processing.Generated;
 import java.text.ParseException;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) throws ParseException {
-        /*
-        Modalidade mod = new Modalidade("Ensino",40);
-        Documentacao doc = new Documentacao("Declaração de Participação");
-        HoraPorAtividade hor = new HoraPorAtividade("Conforme Documento Comprobatório*");
-        System.out.println(mod.id());
-
-        AtividadeComplementar atividadeComplementar = new AtividadeBuilder()
-                .descricao("Participação em atividade de Monitoria")
-                .documentacao(doc)
-                .horaPorAtividade(hor)
-                .limiteMaximo(70)
-                .modalidade(mod)
-                .build();
-        */
-
 
         Modalidade ensino = new Modalidade("Ensino", 40.0);
         AtividadeComplementar e1 = new AtividadeBuilder()
@@ -75,6 +62,13 @@ public class Main {
 
         System.out.println(validacaoPorModalidade.violations());
 
+        SessaoAtual sessaoAtual = new SessaoAtual();
+
+        MenuNovoRequerimento menuNovoRequerimento = new MenuNovoRequerimento("Novo requerimento",sessaoAtual);
+
+        MenuPrincipal menuPrincipal = new MenuPrincipal("Página Inicial",sessaoAtual);
+        menuPrincipal.adicionarItemMenu(menuNovoRequerimento,"1");
+        menuPrincipal.exibir();
 
 
 
