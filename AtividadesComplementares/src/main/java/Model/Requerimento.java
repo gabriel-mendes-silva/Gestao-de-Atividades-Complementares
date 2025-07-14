@@ -12,11 +12,18 @@ public class Requerimento {
     private Date data;
     private Aluno aluno;
     private List<AtividadeDeclarada> atividadesDeclaradas;
-    public Requerimento(String numero, Aluno aluno) throws ParseException {
+    public Requerimento(String numero, Aluno aluno){
         this.numero = numero;
         this.aluno = aluno;
         this.data = Date.from(Instant.now());
         this.atividadesDeclaradas = new ArrayList<>();
+    }
+
+    public Requerimento(Aluno aluno){
+        this.aluno = aluno;
+        this.data = Date.from(Instant.now());
+        this.atividadesDeclaradas = new ArrayList<>();
+        this.numero = String.valueOf(Math.round(Math.random()*10000));
     }
 
     public void adicionarAtividade(AtividadeDeclarada atividadeDeclarada){

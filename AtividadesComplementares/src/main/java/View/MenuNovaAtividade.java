@@ -1,5 +1,6 @@
 package View;
 
+import Controller.NovoRequerimentoController;
 import Model.Aluno;
 import Model.Requerimento;
 import Sessao.SessaoAtual;
@@ -12,12 +13,12 @@ import java.util.Scanner;
 public class MenuNovaAtividade implements ItemMenu{
     private String titulo;
     private Map<String,ItemMenu> idItensMenu;
-    private SessaoAtual sessaoAtual;
+    private NovoRequerimentoController novoRequerimentoController;
 
-    public MenuNovaAtividade(String titulo, SessaoAtual sessaoAtual) {
+    public MenuNovaAtividade(String titulo, NovoRequerimentoController novoRequerimentoController) {
         this.titulo = titulo;
         this.idItensMenu = new HashMap<>();
-        this.sessaoAtual = sessaoAtual;
+        this.novoRequerimentoController = novoRequerimentoController;
     }
     @Override
     public String titulo() {

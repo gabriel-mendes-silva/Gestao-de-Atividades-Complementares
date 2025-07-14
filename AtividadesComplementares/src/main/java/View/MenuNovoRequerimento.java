@@ -1,5 +1,6 @@
 package View;
 
+import Controller.NovoRequerimentoController;
 import Model.Aluno;
 import Model.Requerimento;
 import Sessao.SessaoAtual;
@@ -11,16 +12,18 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class MenuNovoRequerimento implements ItemMenu{
+    private NovoRequerimentoController novoRequerimentoController;
     private String nomeDoAluno;
     private String matricula;
     private String titulo;
     private Map<String,ItemMenu> idItensMenu;
     private SessaoAtual sessaoAtual;
 
-    public MenuNovoRequerimento(String titulo, SessaoAtual sessaoAtual) {
+    public MenuNovoRequerimento(String titulo, NovoRequerimentoController novoRequerimentoController) {
         this.titulo = titulo;
         this.idItensMenu = new HashMap<>();
         this.sessaoAtual = sessaoAtual;
+        this.novoRequerimentoController = novoRequerimentoController;
     }
     @Override
     public String titulo() {
@@ -32,17 +35,11 @@ public class MenuNovoRequerimento implements ItemMenu{
         System.out.println("========= Novo Requerimento ==========");
         Scanner scanner = new Scanner(System.in);
         System.out.println("Insira nome completo: ");
-        this.nomeDoAluno = scanner.nextLine();
+        String nome = scanner.nextLine();
         System.out.println("Insira matrícula: ");
-        this.matricula = scanner.nextLine();
-        Aluno aluno = new Aluno(nomeDoAluno,matricula);
-        try {
-            Requerimento requerimento = new Requerimento(String.valueOf(Math.random()*100),aluno);
-            this.sessaoAtual.requerimentoAtual(requerimento);
-        } catch (ParseException e) {
-            throw new RuntimeException(e);
-        }
-        MenuRequerimento menuRequerimento = new MenuRequerimento("Requerimento",sessaoAtual);
+        String matricula = scanner.nextLine();
+        this.novoRequerimentoController.criarNovoRequerimento(nome,matricula);
+        MenuRequerimento menuRequerimento = new MenuRequerimento("Requerimento",this.novoRequerimentoController);
         menuRequerimento.exibir();
     }
 

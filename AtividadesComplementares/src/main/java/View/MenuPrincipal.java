@@ -9,12 +9,10 @@ import java.util.Scanner;
 public class MenuPrincipal implements ItemMenu{
     private String titulo;
     private Map<String,ItemMenu> idItensMenu;
-    private SessaoAtual sessaoAtual;
 
-    public MenuPrincipal(String titulo, SessaoAtual sessaoAtual) {
+    public MenuPrincipal(String titulo) {
         this.titulo = titulo;
         this.idItensMenu = new HashMap<>();
-        this.sessaoAtual = sessaoAtual;
     }
     @Override
     public String titulo() {

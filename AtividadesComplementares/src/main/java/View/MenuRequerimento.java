@@ -1,5 +1,6 @@
 package View;
 
+import Controller.NovoRequerimentoController;
 import Sessao.SessaoAtual;
 
 import java.util.HashMap;
@@ -7,13 +8,13 @@ import java.util.Map;
 import java.util.Scanner;
 
 public class MenuRequerimento implements ItemMenu{
-    private SessaoAtual sessaoAtual;
+    private NovoRequerimentoController novoRequerimentoController;
     private String titulo;
     private Map<String,ItemMenu> idItensMenu;
 
-    public MenuRequerimento(String titulo, SessaoAtual sessaoAtual) {
+    public MenuRequerimento(String titulo, NovoRequerimentoController novoRequerimentoController) {
         this.titulo = titulo;
-        this.sessaoAtual = sessaoAtual;
+        this.novoRequerimentoController = novoRequerimentoController;
         this.idItensMenu = new HashMap<>();
     }
     @Override
@@ -23,8 +24,8 @@ public class MenuRequerimento implements ItemMenu{
 
     @Override
     public void exibir() {
-        System.out.println("========= Requerimento Nº " + sessaoAtual.requerimentoAtual().numero() + " ==========\n");
-        System.out.println("Atividades Complementares Declaradas: 0\n");
+        System.out.println("========= Requerimento Nº " + this.novoRequerimentoController.numeroRequerimento() + " ==========\n");
+        System.out.println("Atividades Complementares Declaradas: " + this.novoRequerimentoController.numeroDeAtividades() + "\n");
         System.out.println("- - - - - - - - - - - - - - - - - - - - - - - - - - \n");
         for (String idItem : this.idItensMenu.keySet()) {
             System.out.println(
