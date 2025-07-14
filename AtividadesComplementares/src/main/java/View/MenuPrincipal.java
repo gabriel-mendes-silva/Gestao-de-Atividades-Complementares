@@ -29,7 +29,6 @@ public class MenuPrincipal implements ItemMenu{
             );
         }
         System.out.println("Escolha a opção (0 - Sair):");
-        Scanner scanner = new Scanner(System.in);
         this.buscarItemMenuPorNumero().exibir();
     }
     public void adicionarItemMenu(ItemMenu itemMenu, String numero){
