@@ -17,6 +17,7 @@ import org.postgresql.ds.PGSimpleDataSource;
 public class Main {
     public static void main(String[] args) throws ParseException {
 
+        /*
         Modalidade ensino = new Modalidade("Ensino", 40.0);
         AtividadeComplementar e1 = new AtividadeBuilder()
                 .descricao("Disciplinas cursadas com aproveitamento, não previstas no curriculo do curso.")
@@ -49,7 +50,7 @@ public class Main {
                 .limiteMaximo(80)
                 .build();
 
-        /*
+
         Aluno aluno = new Aluno("Gabriel","202410004733");
         Requerimento req = new Requerimento("22322224",aluno);
 
@@ -67,7 +68,7 @@ public class Main {
         System.out.println("Pesquisa: " +validacaoPorModalidade.modalidadeEhValida(pesquisa));
 
         System.out.println(validacaoPorModalidade.violations());
-        */
+
 
         System.out.println("\nComo a aplicação deve aperecer, quando operada desde o início");
         SessaoAtual sessaoAtual = new SessaoAtual();
@@ -77,19 +78,19 @@ public class Main {
         menuRequerimento.adicionarItemMenu(menuNovaAtividade,"1");
         MenuNovoRequerimento menuNovoRequerimento = new MenuNovoRequerimento("Novo requerimento",novoRequerimentoController);
         menuNovoRequerimento.adicionarItemMenu(menuRequerimento,"1");
-
         MenuPrincipal menuPrincipal = new MenuPrincipal("Página Inicial");
         menuPrincipal.adicionarItemMenu(menuNovoRequerimento,"1");
         menuPrincipal.exibir();
 
+        */
 
-        /*
         PGSimpleDataSource pgSimpleDataSource = new PGSimpleDataSource();
         pgSimpleDataSource.setServerNames(new String[]{"localhost"});
         pgSimpleDataSource.setPortNumbers(new int[]{5432});
         pgSimpleDataSource.setDatabaseName("AtividadesComplementares");
-        pgSimpleDataSource.setUser("postgres");
-        pgSimpleDataSource.setPassword("ifsc");
+        pgSimpleDataSource.setUser(System.getenv("DB_USER"));
+        pgSimpleDataSource.setPassword(System.getenv("DB_PASSWORD"));
+
 
         Aluno aluno = new Aluno("Gabriel Matos Mendes da Silva","202410004733");
         AlunoPg alunoPg = new AlunoPg(pgSimpleDataSource);
@@ -97,7 +98,7 @@ public class Main {
         System.out.println(alunoPg.buscarPorId(7).nome());
         System.out.println(alunoPg.buscarPorId(7).matricula());
 
-         */
+
 
     }
 }
