@@ -2,7 +2,7 @@ package org.example;
 
 import Controller.NovoRequerimentoController;
 import Model.*;
-import Repositorio.AlunoPg;
+import Repositorio.*;
 import Sessao.SessaoAtual;
 import View.MenuNovaAtividade;
 import View.MenuPrincipal;
@@ -97,6 +97,20 @@ public class Main {
 
         System.out.println(alunoPg.buscarPorId(7).nome());
         System.out.println(alunoPg.buscarPorId(7).matricula());
+
+        AtividadeComplementarPg atividadeComplementarPg = new AtividadeComplementarPg(pgSimpleDataSource);
+        System.out.println(atividadeComplementarPg.buscarPorId(1).descricao());
+
+        AtividadeComplementar atividadeComplementar = new AtividadeBuilder()
+                .descricao("Passei na praça com o cachorro")
+                .limiteMaximo(23)
+                .horaPorAtividade(new HoraPorAtividadePg(pgSimpleDataSource).buscarPorId(4))
+                .documentacao(new DocumentacaoPg(pgSimpleDataSource).buscarPorId(26))
+                .modalidade(new ModalidadePg(pgSimpleDataSource).buscarPorId(6))
+                .build();
+
+        atividadeComplementarPg.inserir(atividadeComplementar);
+
 
 
 
